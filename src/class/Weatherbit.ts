@@ -3,7 +3,7 @@ import { SevereAlertsResponse } from '../types';
 
 class Weatherbit extends API {
 
-  private key: string = '47b4b166bf68465eb7c4695bd5f4e6f5'
+  private key: string = process.env.WEATHER_BIT_KEY!;
 
   constructor() {
     super('http://api.weatherbit.io/v2.0');

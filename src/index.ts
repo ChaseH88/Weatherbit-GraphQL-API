@@ -1,3 +1,7 @@
+// For Environment Variables
+import { config } from 'dotenv';
+config();
+
 import { cityLocation, oneHourForecast } from './utilities/axios';
 import { Weatherbit } from './class/Weatherbit';
 import { GraphQLServer } from 'graphql-yoga'
