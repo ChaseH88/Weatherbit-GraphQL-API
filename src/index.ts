@@ -1,10 +1,11 @@
-import { cityLocation, severeWeatherAlert, oneHourForecast } from './utilities/axios';
+import { cityLocation, oneHourForecast } from './utilities/axios';
+import { Weatherbit } from './class/Weatherbit';
 import { GraphQLServer } from 'graphql-yoga'
 
 const typeDefs = `
   type Query {
     hello(name: String): String!
-    severeWeatherAlert(city: String, state: String): SevereInfo
+    severeAlerts(city: String, state: String): SevereInfo
   }
 
   type SevereInfo {
@@ -36,14 +37,14 @@ const typeDefs = `
 
 const resolvers = {
   Query: {
-    severeWeatherAlert: async (_:any, { city, state }: {city: string, state: string }) => {
-        return await severeWeatherAlert(city, state);
-    }
+    severeAlerts: async (_: any, { city, state }: { city: string, state: string }) => (
+      await new Weatherbit().severeAlerts(city, state)
+    )
   }
 }
 
 const server = new GraphQLServer({ typeDefs, resolvers })
 server.start(() => {
-    console.log('Server is running on http://localhost:4000/')
+  console.log('Server is running on http://localhost:4000/')
 })
 
