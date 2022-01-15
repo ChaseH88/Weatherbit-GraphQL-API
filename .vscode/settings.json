@@ -3,7 +3,7 @@
   "files.exclude": {
     ".git": true,
     ".editorconfig": true,
-    ".gitignore": true,
+    ".gitignore": false,
     "node_modules": true,
     "package-lock.json": true,
     "nodemon.json": true
