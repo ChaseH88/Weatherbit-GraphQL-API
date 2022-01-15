@@ -1,0 +1,18 @@
+{
+  "html.validate.scripts": false,
+  "files.exclude": {
+    ".git": true,
+    ".editorconfig": true,
+    ".gitignore": true,
+    "node_modules": true,
+    "package-lock.json": true,
+    "nodemon.json": true
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#252525",
+    "titleBar.inactiveForeground": "#252525",
+    "titleBar.activeBackground": "#00ffb3",
+    "titleBar.inactiveBackground": "#00ffb3"
+  },
+  "editor.formatOnSave": true
+}
