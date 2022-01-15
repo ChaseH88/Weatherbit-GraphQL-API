@@ -1,7 +1,7 @@
 type Query {
-    hello(name: String): String!
-    severeAlerts(city: String, state: String): SevereInfo
-  }
+  hello(name: String): String!
+  severeAlerts(city: String, state: String): SevereInfo
+}
 
 type SevereInfo {
   country_code: String
